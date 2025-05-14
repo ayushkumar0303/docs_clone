@@ -6,9 +6,11 @@ import {
   BoldIcon,
   ItalicIcon,
   LucideIcon,
+  MessageSquarePlusIcon,
   PrinterIcon,
   Redo2Icon,
   SpellCheckIcon,
+  UnderlineIcon,
   Undo2Icon,
 } from "lucide-react";
 import React from "react";
@@ -86,6 +88,18 @@ export const Toolbar = () => {
         icon: ItalicIcon,
         isActive: editor?.isActive("italic"),
         onClick: () => editor?.chain().focus().toggleItalic().run(),
+      },
+      {
+        label: "Underline",
+        icon: UnderlineIcon,
+        isActive: editor?.isActive("underline"),
+        onClick: () => editor?.chain().focus().toggleUnderline().run(),
+      },
+      {
+        label: "Comment",
+        icon: MessageSquarePlusIcon,
+        isActive: false,
+        onClick: () => console.log("Todo comment"),
       },
     ],
   ];
