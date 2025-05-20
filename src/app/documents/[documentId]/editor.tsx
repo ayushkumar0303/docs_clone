@@ -9,6 +9,8 @@ import TableHeader from "@tiptap/extension-table-header";
 import TableRow from "@tiptap/extension-table-row";
 import Underline from "@tiptap/extension-underline";
 import Image from "@tiptap/extension-image";
+import { Color } from "@tiptap/extension-color";
+import Highlight from "@tiptap/extension-highlight";
 import ImageResize from "tiptap-extension-resize-image";
 import { useEditorStore } from "@/store/use-editor-store";
 import FontFamily from "@tiptap/extension-font-family";
@@ -54,6 +56,10 @@ function Editor() {
       StarterKit,
       TaskList,
       FontFamily,
+      Color,
+      Highlight.configure({
+        multicolor: true,
+      }),
       TextStyle,
       TaskItem.configure({ nested: true }),
       Table,
