@@ -4,6 +4,7 @@ import TaskItem from "@tiptap/extension-task-item";
 import TaskList from "@tiptap/extension-task-list";
 import StarterKit from "@tiptap/starter-kit";
 import Table from "@tiptap/extension-table";
+import Link from "@tiptap/extension-link";
 import TableCell from "@tiptap/extension-table-cell";
 import TableHeader from "@tiptap/extension-table-header";
 import TableRow from "@tiptap/extension-table-row";
@@ -54,6 +55,11 @@ function Editor() {
     },
     extensions: [
       StarterKit,
+      Link.configure({
+        openOnClick: true,
+        autolink: true,
+        defaultProtocol: "https",
+      }),
       TaskList,
       FontFamily,
       Color,

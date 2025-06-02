@@ -91,6 +91,18 @@ body {
 
 .tiptap {
 
+
+  /* Link styles */
+  a {
+    color: rgb(93, 93, 244);
+    cursor: pointer;
+
+    &:hover {
+      color: rgb(93, 93, 244);
+      text-decoration: underline;
+    }
+  }
+
   ul,
   ol {
     padding: 0 1rem;
