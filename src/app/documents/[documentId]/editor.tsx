@@ -14,6 +14,7 @@ import { Color } from "@tiptap/extension-color";
 import Highlight from "@tiptap/extension-highlight";
 import ImageResize from "tiptap-extension-resize-image";
 import { useEditorStore } from "@/store/use-editor-store";
+import TextAlign from "@tiptap/extension-text-align";
 import FontFamily from "@tiptap/extension-font-family";
 import TextStyle from "@tiptap/extension-text-style";
 
@@ -55,6 +56,9 @@ function Editor() {
     },
     extensions: [
       StarterKit,
+      TextAlign.configure({
+        types: ["heading", "paragraph"],
+      }),
       Link.configure({
         openOnClick: true,
         autolink: true,
